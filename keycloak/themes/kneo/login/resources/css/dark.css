@@ -1,0 +1,46 @@
+.kneo-dark body{
+  background-color:#1a1a1a;
+  color:#f0f0f0;
+}
+.kneo-dark a{color:#42A5F5}
+.kneo-dark .card-pf,
+.kneo-dark .pf-c-card,
+.kneo-dark .pf-c-login{
+  background-color:#2a2a2a;
+  color:#f0f0f0;
+}
+.kneo-dark .pf-c-form-control,
+.kneo-dark input,
+.kneo-dark select,
+.kneo-dark textarea{
+  background-color:#2a2a2a;
+  color:#f0f0f0;
+  border-color:#333;
+}
+.kneo-dark .pf-c-button.pf-m-primary{
+  background-color:#2196F3;
+  border-color:#2196F3;
+}
+.kneo-dark .pf-c-button:hover{
+  filter:brightness(1.05);
+}
+.kneo-dark .pf-c-alert{
+  background-color:#2a2a2a;
+  color:#f0f0f0;
+}
+.kneo-dark .pf-c-title,
+.kneo-dark .login-pf-header,
+.kneo-dark .kc-feedback-text{
+  color:#f0f0f0;
+}
+.kneo-dark .pf-c-dropdown__menu{
+  background-color:#2a2a2a;
+  color:#f0f0f0;
+}
+.kneo-dark .pf-c-dropdown__menu-item{
+  color:#f0f0f0;
+}
+.kneo-dark .pf-c-check__label,
+.kneo-dark .pf-c-radio__label{
+  color:#f0f0f0;
+}
