@@ -1,46 +1,144 @@
-.kneo-dark body{
-  background-color:#1a1a1a;
-  color:#f0f0f0;
+/* Dark theme for Keycloak login */
+.kneo-dark body,
+.kneo-dark .login-pf body {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
 }
-.kneo-dark a{color:#42A5F5}
+
+.kneo-dark a {
+  color: #42A5F5 !important;
+}
+
+.kneo-dark a:hover {
+  color: #64B5F6 !important;
+}
+
+/* Card and form backgrounds */
 .kneo-dark .card-pf,
 .kneo-dark .pf-c-card,
-.kneo-dark .pf-c-login{
-  background-color:#2a2a2a;
-  color:#f0f0f0;
+.kneo-dark .pf-c-login {
+  background-color: #2a2a2a !important;
+  color: #f0f0f0 !important;
+  border-color: #3a3a3a !important;
 }
+
+/* Form inputs */
 .kneo-dark .pf-c-form-control,
 .kneo-dark input,
 .kneo-dark select,
-.kneo-dark textarea{
-  background-color:#2a2a2a;
-  color:#f0f0f0;
-  border-color:#333;
+.kneo-dark textarea {
+  background-color: #1f1f1f !important;
+  color: #f0f0f0 !important;
+  border-color: #444 !important;
 }
-.kneo-dark .pf-c-button.pf-m-primary{
-  background-color:#2196F3;
-  border-color:#2196F3;
+
+.kneo-dark .pf-c-form-control:focus,
+.kneo-dark input:focus,
+.kneo-dark select:focus,
+.kneo-dark textarea:focus {
+  border-color: #2563eb !important;
+  background-color: #252525 !important;
 }
-.kneo-dark .pf-c-button:hover{
-  filter:brightness(1.05);
+
+/* Buttons - keep gradient but adjust for dark theme */
+.kneo-dark .btn-primary,
+.kneo-dark .pf-c-button.pf-m-primary,
+.kneo-dark #kc-login,
+.kneo-dark #kc-form-login .btn-primary {
+  background: linear-gradient(to right, #2563eb, #9333ea) !important;
+  border: 2px solid transparent !important;
+  color: white !important;
 }
-.kneo-dark .pf-c-alert{
-  background-color:#2a2a2a;
-  color:#f0f0f0;
+
+.kneo-dark .btn-primary:hover,
+.kneo-dark .pf-c-button.pf-m-primary:hover,
+.kneo-dark #kc-login:hover,
+.kneo-dark #kc-form-login .btn-primary:hover {
+  background: transparent !important;
+  border: 2px solid #2563eb !important;
+  color: #42A5F5 !important;
 }
+
+/* Alerts */
+.kneo-dark .pf-c-alert {
+  background-color: #2a2a2a !important;
+  color: #f0f0f0 !important;
+  border-color: #444 !important;
+}
+
+/* Titles and headers */
 .kneo-dark .pf-c-title,
 .kneo-dark .login-pf-header,
-.kneo-dark .kc-feedback-text{
-  color:#f0f0f0;
+.kneo-dark .kc-feedback-text,
+.kneo-dark h1,
+.kneo-dark h2,
+.kneo-dark h3,
+.kneo-dark h1#kc-page-title {
+  color: #f0f0f0 !important;
 }
-.kneo-dark .pf-c-dropdown__menu{
-  background-color:#2a2a2a;
-  color:#f0f0f0;
+
+/* Dropdowns */
+.kneo-dark .pf-c-dropdown__menu {
+  background-color: #2a2a2a !important;
+  color: #f0f0f0 !important;
+  border-color: #444 !important;
 }
-.kneo-dark .pf-c-dropdown__menu-item{
-  color:#f0f0f0;
+
+.kneo-dark .pf-c-dropdown__menu-item {
+  color: #f0f0f0 !important;
 }
+
+.kneo-dark .pf-c-dropdown__menu-item:hover {
+  background-color: #3a3a3a !important;
+}
+
+/* Checkboxes and radio buttons */
 .kneo-dark .pf-c-check__label,
-.kneo-dark .pf-c-radio__label{
-  color:#f0f0f0;
+.kneo-dark .pf-c-radio__label,
+.kneo-dark #kc-form-options .checkbox {
+  color: #d0d0d0 !important;
+}
+
+/* Labels */
+.kneo-dark .pf-c-form__label,
+.kneo-dark label {
+  color: #e0e0e0 !important;
+}
+
+/* Info wrapper */
+.kneo-dark #kc-info-wrapper {
+  background-color: #2a2a2a !important;
+  color: #d0d0d0 !important;
+}
+
+/* Social section */
+.kneo-dark .kc-social-section {
+  color: #d0d0d0 !important;
+}
+
+/* Select auth boxes */
+.kneo-dark .select-auth-box-parent {
+  border-color: #444 !important;
+}
+
+.kneo-dark .select-auth-box-parent:hover {
+  background-color: #3a3a3a !important;
+}
+
+.kneo-dark .select-auth-box-headline {
+  color: #42A5F5 !important;
+}
+
+.kneo-dark .select-auth-box-desc {
+  color: #d0d0d0 !important;
+}
+
+/* Signup text */
+.kneo-dark .login-pf-signup {
+  color: #d0d0d0 !important;
+}
+
+/* Forgot password link */
+.kneo-dark #kc-form-options a {
+  color: #42A5F5 !important;
 }

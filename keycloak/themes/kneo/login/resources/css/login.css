@@ -3,7 +3,7 @@
 }
 
 .login-pf body {
-    background: #f9fafb;
+    background: #333333 !important;
     background-size: cover;
     height: 100%;
 }
@@ -161,7 +161,8 @@ div.kc-logo-text span {
 #kc-info-wrapper {
     font-size: 13px;
     padding: 15px 35px;
-    background-color: #F0F0F0;
+    background-color: #2a2a2a !important;
+    color: #f0f0f0 !important;
 }
 
 #kc-form-options span {
@@ -284,9 +285,21 @@ ul#kc-totp-supported-apps {
     left: -10px;
 }
 
-.kc-login-tooltip {
-    position: relative;
-    display: inline-block;
+.kc-login-tooltip,
+.kc-login-tooltip *,
+.kc-tooltip-text,
+button[aria-describedby],
+[role="tooltip"],
+.pf-c-tooltip,
+#password + *,
+#password ~ *,
+#kc-form-options,
+.checkbox,
+input[type="checkbox"],
+label[for="rememberMe"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
 .kc-social-section {
@@ -297,61 +310,172 @@ ul#kc-totp-supported-apps {
     margin-bottom: 10px
 }
 
-.kc-login-tooltip .kc-tooltip-text{
-    top:-3px;
-    left:160%;
-    background-color: black;
-    visibility: hidden;
-    color: #fff;
+.card-pf form.form-actions .btn {
+    float: right;
+    margin-left: 10px;
+}
 
-    min-width:130px;
+#kc-form-buttons {
+    margin-top: 20px;
+}
+
+.login-pf-page .login-pf-brand {
+    margin-top: 20px;
+    max-width: 360px;
+    width: 40%;
+}
+
+.select-auth-box-arrow{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.select-auth-box-icon{
+    display: flex;
+    flex: 0 0 2em;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-left: 3rem;
+}
+
+.select-auth-box-parent{
+    border-top: 1px solid var(--pf-global--palette--black-200);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+.select-auth-box-parent:hover{
+    background-color: #f7f8f8;
+}
+
+.select-auth-container {
+    padding-bottom: 0px !important;
+}
+
+.select-auth-box-headline {
+    font-size: var(--pf-global--FontSize--md);
+    color: var(--pf-global--primary-color--100);
+    font-weight: bold;
+}
+
+.select-auth-box-desc {
+    font-size: var(--pf-global--FontSize--sm);
+}
+
+.select-auth-box-paragraph {
     text-align: center;
-    border-radius: 2px;
-    box-shadow:0 1px 8px rgba(0,0,0,0.6);
-    padding: 5px;
-
-    position: absolute;
-    opacity:0;
-    transition:opacity 0.5s;
+    font-size: var(--pf-global--FontSize--md);
+    margin-bottom: 5px;
 }
 
-.kc-login-tooltip:hover .kc-tooltip-text {
-    visibility: visible;
-    opacity:0.7;
+.card-pf {
+    margin: 0 auto;
+    background: #2a2a2a !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #333333 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
+    padding: 0 20px;
+    max-width: 500px;
 }
 
-.kc-login-tooltip .kc-tooltip-text::after {
-    content: " ";
-    position: absolute;
-    top: 15px;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
+@media (max-width: 767px) {
+    .login-pf-page .card-pf {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+        border-top: 0;
+        box-shadow: 0 0;
+    }
+
+    .kc-social-grid {
+        grid-column-end: 12;
+        --pf-l-grid__item--GridColumnEnd: span 12;
+    }
+
+    .kc-social-grid .kc-social-icon-text {
+        left: -15px;
+    }
 }
 
-.btn-primary,
-.pf-c-button.pf-m-primary,
-#kc-login,
-#kc-form-login .btn-primary {
-    background: linear-gradient(to right, #2563eb, #9333ea) !important;
-    border: 2px solid transparent !important;
-    color: white !important;
-    font-weight: bold !important;
-    padding: 12px 24px !important;
-    transition: all 0.5s ease-out !important;
-    transform: scale(1) !important;
+.login-pf-page .login-pf-signup {
+    font-size: 15px;
+    color: #6b7280 !important;
 }
 
-.btn-primary:hover,
-.pf-c-button.pf-m-primary:hover,
-#kc-login:hover,
-#kc-form-login .btn-primary:hover {
-    background: transparent !important;
-    border: 2px solid #2563eb !important;
-    color: #2563eb !important;
-    transform: scale(1.05) !important;
+#kc-content-wrapper .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-pf-page.login-pf-page-accounts {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-pf-page .btn-primary {
+    margin-top: 0;
+}
+
+.login-pf-page .list-view-pf .list-group-item {
+    border-bottom: 1px solid #ededed;
+}
+
+.login-pf-page .list-view-pf-description {
+    width: 100%;
+}
+
+#kc-form-login div.form-group:last-of-type,
+#kc-register-form div.form-group:last-of-type,
+#kc-update-profile-form div.form-group:last-of-type,
+#kc-update-email-form div.form-group:last-of-type{
+    margin-bottom: 0px;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0;
+}
+
+#kc-back {
+    margin-top: 5px;
+}
+
+.kc-recovery-codes-warning {
+    margin-bottom: 32px;
+}
+.kc-recovery-codes-warning .pf-c-alert__description p {
+    font-size: 0.875rem;
+}
+.kc-recovery-codes-list {
+    list-style: none;
+    columns: 2;
+    margin: 16px 0;
+    padding: 16px 16px 8px 16px;
+    border: 1px solid #D2D2D2;
+}
+.kc-recovery-codes-list li {
+    margin-bottom: 8px;
+    font-size: 11px;
+}
+.kc-recovery-codes-list li span {
+    color: #6A6E73;
+    width: 16px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.kc-recovery-codes-actions {
+    margin-bottom: 24px;
+}
+.kc-recovery-codes-actions button {
+    padding-left: 0;
+}
+.kc-recovery-codes-actions button i {
+    margin-right: 8px;
 }
 
 @media (min-width: 768px) {
@@ -374,7 +498,7 @@ ul#kc-totp-supported-apps {
 @media (max-width: 767px) {
 
     .login-pf body {
-        background: #f9fafb;
+        background: #1a1a1a !important;
     }
 
     #kc-header {
@@ -498,10 +622,11 @@ ul#kc-totp-supported-apps {
 
 .card-pf {
     margin: 0 auto;
-    background: white !important;
-    border-radius: 8px !important;
-    border-top: 4px solid #2563eb !important;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    background: #2a2a2a !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #333333 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
     padding: 0 20px;
     max-width: 500px;
 }
@@ -600,9 +725,4 @@ ul#kc-totp-supported-apps {
 }
 .kc-recovery-codes-actions button i {
     margin-right: 8px;
-}
-
-.kc-recovery-codes-confirmation {
-    align-items: baseline;
-    margin-bottom: 16px;
 }
